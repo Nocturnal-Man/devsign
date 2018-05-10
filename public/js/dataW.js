@@ -5,6 +5,7 @@ firebase.database().ref('USER/PASSWORD').set('NEW');
 firebase.database().ref('USER/NAME').set('NEW');
 firebase.database().ref('USER/PHONENUM').set('NEW');
 firebase.database().ref('USER/SIGNDATE').set('NEW');
+firebase.database().ref('USER/BIRTHDAY').set('NEW');
 
 console.log("data 쓰기 js 종료");
 
