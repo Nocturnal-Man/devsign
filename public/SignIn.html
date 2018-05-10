@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SignInPage</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <style media="screen">
+        body {background: #eee;}
+        #MY_NAME {font-size: 1.5em;font-weight: bold;}
+        #CONTENTS {min-height: 700px;margin-top: 20px;}
+        .input-field input[type=text]:focus {border-bottom: 1px solid #3f51b5 !important;box-shadow: 0 1px 0 0 #3f51b5 !important;}
+    </style>
+</head>
+
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" class="brand-logo"><img src="img/logo.png"></a>
+
+            <!-- 메인메뉴 -->
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+            
+            <!-- 드롭다운 메뉴 -->
+            <ul id="dropdown1" class="dropdown-content">
+               <li><a class="black-text"><strong>더 보기</strong></a></li>
+               <li class="divider"></li>
+            </ul>
+
+            <!-- 모바일 메인 메뉴 -->
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="index.html">HOME</a></li>
+            </ul>
+
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="section no-pad-bot " id="index-banner">
+        <div class="container mysection">
+            <br><br>
+            <h3 class="header center my-text">회원가입</h3>
+            <div class="row center">
+
+            </div>
+            <div class="">
+                <form class="myinput input-field">
+                    <div class="row z-depth-1 col l9 m9 s12 input-field">
+                        <input id="ID" type="email" class="validate">
+                        <label for="ID">ID</label>
+                    </div>
+                    <div class="row z-depth-1 col l9 m9 s12 input-field">
+                        <input id="PASSWORD" type="password" class="validate">
+                        <label for="PASSWORD">PASSWORD</label>
+                    </div>
+                    <div class="row z-depth-1 col l9 m9 s12 input-field">
+                        <input id="Name" type="text" name="First_name" class="validate">
+                        <label for="Name">Name</label>
+                    </div>
+                    <div class="row z-depth-1 col l9 m9 s12 input-field">
+                        <input id="Phone_num" type="tel" name="Phone_num" maxlength="11" class="validate">
+                        <label for="phone_num">Phone Number</label>
+                    </div>
+                    <div class="row z-depth-1 col l9 m9 s12 input-field">
+                        <label for="Birth_month">Birth Day 8 Number plz</label>
+                        <input id="Birth_month" type="text" name="Birth_month" maxlength="11" class="validate">
+                    </div>
+                    <h1></h1>
+                </form>
+            </div>
+            <div class="row center">
+                <button id="BTN_SIGNUP" type="button" class="btn-large waves-effect waves-light btn-my">Get Started</button>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/dataW.js"></script>
+    <script type="text/javascript">
+        $('.button-collapse').sideNav();
+        $(".dropdown-button").dropdown();
+    </script>
+</body>
+
+</html>
