@@ -7,6 +7,7 @@ firebase.database().ref('USER/PHONENUM').set('NEW');
 firebase.database().ref('USER/SIGNDATE').set('NEW');
 firebase.database().ref('USER/BIRTHDAY').set('NEW');
 
+
 console.log("data 쓰기 js 종료");
 
 
@@ -60,7 +61,7 @@ $("#BTN_SIGNUP").click(function () {
         firebase.database().ref().update(updates4);
         console.log("phone:%s 로 메시지변경", new_PHONENUM);
     }
-    
+
     var new_BIRTHDAY = $("#Birth_Month").val();
     var updates5 = {};
     if (new_PHONENUM == NULL) {
