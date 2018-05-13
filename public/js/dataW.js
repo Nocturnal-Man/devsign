@@ -119,12 +119,14 @@ $("#BTN_SIGNUP").click(function () {
     });
     firebase.database().ref('USER/SIGNDATE_Y').on('value', function (snapshot) {
         var Date = new Date();
+        
         var Sign_Y = Date.getFullYear();
         var Sign_m = Date.getMonth();
         var Sign_d = Date.getDate();
         var updates5_1 = {};
         var updates5_2 = {};
         var updates5_3 = {};
+        
         var SIGNDATE_config = snapshot.val();
         
         
