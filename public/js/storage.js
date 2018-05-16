@@ -1,12 +1,13 @@
 var config = {
-  apiKey:"AIzaSyCB-UAilnsfNeHFcPZTAGwVK5dxDZ5n6F0",
-      authDomain: "devsign-a7066.firebaseapp.com",
-      databaseURL: "https://devsign-a7066.firebaseio.com",
-      projectId: "devsign-a7066",
-      storageBucket: "devsign-a7066.appspot.com",
-      messagingSenderId: "1098166753532"
+  apiKey:"",
+      authDomain: "",
+      databaseURL: "",
+      projectId: "",
+      storageBucket: "",
+      messagingSenderId: ""
 };
 firebase.initializeApp(config);
+
 
 var storage = firebase.storage();
 var storageRef = storage.ref();
