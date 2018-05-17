@@ -14,5 +14,8 @@
     "none"
   ],
   "author": "none",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "hashlib": "^1.0.1"
+  }
 }
