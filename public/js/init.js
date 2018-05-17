@@ -7,5 +7,6 @@ var config = {
       messagingSenderId: "1098166753532"
 };
 firebase.initializeApp(config);
+
 console.log("파이어베이스 정보 받아오기");
 //개인 파이어베이스 정보 넣기
