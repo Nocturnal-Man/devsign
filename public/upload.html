@@ -28,7 +28,6 @@
             border-bottom: 1px solid #3f51b5 !important;
             box-shadow: 0 1px 0 0 #3f51b5 !important;
         }
-
     </style>
 </head>
 
@@ -49,40 +48,65 @@
                 <li class="divider"></li>
                 <li><a href="SignIn.html">Login</a></li>
             </ul>
-           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
     </nav>
-    <div class="section no-pad-bot" id="index-banner">
-        <div class="container">
-            <br><br>
-            <h1 class="header center my-text">Hello!</h1>
-            <div class="row center">
-                <h5 class="header col s12 light"></h5>
-            </div>
-            <div class="row center">
-            
-            </div>
-            <br><br>
-
-        </div>
-    </div>
-
-
-    <div class="container aligncenter">
-            <!--   Icon Section   -->
-            <div class="row mainbody aligncenter">
-                <div class="col s12 m4 uploadbox">
-                    <div class="icon-block">
+    <div class="container" id="index=banner">
+        <!--   Icon Section   -->
+        <div>
+            <div class="col s12 m4">
+                <div class="icon-block">
+                    <div class="minputfile">
                         <h2 class="center light-blue-text"><i class="material-icons" style="font-size: 50px">cloud_upload</i></h2>
                         <h5 class="center" style="font-size: 23px"></h5>
-                       <form action="">
-                           <input type="file" name="text"><br>
-                           <input type="submit">
-                       </form>
-                        <p class="light"></p>
+                        <progress value="0" max="100" id="uploader">o%</progress>
+                        <input type="file" value="upload" id="fileButton" />
                     </div>
+                    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+                    <script>
+                        // Initialize Firebase
+                        var config = {
+                            apiKey: "AIzaSyCB-UAilnsfNeHFcPZTAGwVK5dxDZ5n6F0",
+                            authDomain: "devsign-a7066.firebaseapp.com",
+                            databaseURL: "https://devsign-a7066.firebaseio.com",
+                            projectId: "devsign-a7066",
+                            storageBucket: "devsign-a7066.appspot.com",
+                            messagingSenderId: "1098166753532"
+                        };
+                        firebase.initializeApp(config);
+                        var storage = firebase.storage();
+
+
+                        var uploader = document.getElementById('uploader');
+                        var fileButton = document.getElementById('fileButton');
+
+                        fileButton.addEventListener('change', function(e) {
+                            //Get file
+                            var file = e.target.files[0];
+
+                            //Create a Stoarge
+                            var storageRef = storage.ref('Folder/' + file.name);
+
+                            var task = storageRef.put(file);
+
+                            task.on('state_change', function progress(snapshot) {
+                                    var percentage = (snapshot.byteTransferred / snapshot.totalBytes) * 100;
+                                    uploader.value = percentage;
+                                },
+                                function error(err) {
+
+                                },
+                                function complere() {
+
+                                }
+                            );
+                        });
+                    </script>
+                    <p class="light"></p>
                 </div>
             </div>
+
+        </div>
         <br><br>
     </div>
 
@@ -100,7 +124,7 @@
                     <ul>
                     </ul>
                 </div>
-             <div class="col l3 s12">
+                <div class="col l3 s12">
                     <h5 class="white-text">Connect</h5>
                     <ul>
                         <li><a class="white-text" href="index.html">Logout</a></li>
@@ -121,14 +145,15 @@
 
 
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
     <script src="js/materialize.js"></script>
-    <script src="js/init.js"></script>
-      <script type="text/javascript">
-    $('.button-collapse').sideNav();
-    $(".dropdown-button").dropdown();
-  </script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-storage.js"></script>
+    <script type="text/javascript">
+        $('.button-collapse').sideNav();
+        $(".dropdown-button").dropdown();
+    </script>
 
 </body>
 

@@ -1,23 +1,34 @@
-var config = {
-  apiKey:"AIzaSyCB-UAilnsfNeHFcPZTAGwVK5dxDZ5n6F0",
-      authDomain: "devsign-a7066.firebaseapp.com",
-      databaseURL: "https://devsign-a7066.firebaseio.com",
-      projectId: "devsign-a7066",
-      storageBucket: "devsign-a7066.appspot.com",
-      messagingSenderId: "1098166753532"
-};
-firebase.initializeApp(config);
+       var config = {
+           apiKey: "AIzaSyCB-UAilnsfNeHFcPZTAGwVK5dxDZ5n6F0",
+           authDomain: "devsign-a7066.firebaseapp.com",
+           databaseURL: "https://devsign-a7066.firebaseio.com",
+           projectId: "devsign-a7066",
+           storageBucket: "devsign-a7066.appspot.com",
+           messagingSenderId: "1098166753532"
+       };
+       firebase.initializeApp(config);
 
+       var uploader = document.getElementById('uploader');
+       var fileButton = document.getElementById('fileButton');
 
-var storage = firebase.storage();
-var storageRef = storage.ref();
+       $("#fileButton").addEventListener('change', function (e) {
+           //Get file
+           var file = e.target.files[0];
 
-var imagesRef = storageRef.child('images');
-var spaceRef = storageRef.child('images/logo.png');
+           //Create a Stoarge
+           var storageRef = firebase.storage().ref('Folder/' + file.name);
 
-var path = spaceRef.fullPath;
-var name = spaceRef.name;
-var imagesRef = spaceRef.parent;
+           var task = storageRef.put(file);
 
+           task.on('state_change'function progress(snapshot) {
+                   var percentage = (snapshot.byteTransferred / snapshot.totalBytes) * 100;
+                   uploader.value = percentage;
+               },
+               function error(err) {
 
-uploadTask
+               },
+               function complere() {
+
+               }
+           );
+       });
