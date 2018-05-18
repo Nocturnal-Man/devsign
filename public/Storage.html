@@ -1,32 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <title>DEVSIGN_</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>Starter Template - Materialize</title>
 
+    <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css" media="screen,projection" />
-    <style>
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <style media="screen">
+        body {
+            background: #eee;
+        }
+
+        #MY_NAME {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
         #CONTENTS {
-            min-height: 1000px;
+            min-height: 700px;
+            margin-top: 20px;
+        }
+
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #3f51b5 !important;
+            box-shadow: 0 1px 0 0 #3f51b5 !important;
         }
 
     </style>
 </head>
 
 <body>
-   <!--상단 네비게이션 바-->
-    <nav class="indigo">
-        <div class="nav-wrapper">
-            <div class="container">
-                <a href="/" class="breadcrumb">Home</a>
-            </div>
+    <nav class="btn-my">
+        <div class="nav-wrapper container">
+            <a id="logo-container" class="brand-logo"><img src="img/logo.png"></a>
+
+            <ul class="right hide-on-med-and-down">
+                <li><a>Music</a></li>
+                <li><a>Photo</a></li>
+                <li><a>My page</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+
+            <ul id="nav-mobile" class="side-nav">
+                <li><a href="index.html" target="_blank" class="center">Menu</a></li>
+                <li class="divider"></li>
+                <li><a href="SignIn.html">Login</a></li>
+            </ul>
+           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
     </nav>
-    
-    
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h1 class="header center my-text">Hello!</h1>
+            <div class="row center">
+                <h5 class="header col s12 light">My Page</h5>
+            </div>
+            <div class="row center">
+            
+            </div>
+            <br><br>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+            <!--   Icon Section   -->
+            <div class="row mainbody">
+                <div class="col s12 m4 mbox">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="material-icons">collections</i></h2>
+                        <h5 class="center" style="font-size: 23px"></h5>
+                        <ul>
+                            <li style="text-align: center"><a>업로드 파일</a></li>
+                            <li style="text-align: center"><a>다운로드 기록</a></li>
+                        </ul>
+
+                        <p class="light"></p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4 mbox">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="material-icons">border_color</i></h2>
+                        <h5 class="center"></h5>
+
+                        <p class="light"></p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4 mbox">
+                    <div class="icon-block">
+                        <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+                        <h5 class="center"></h5>
+
+                        <p class="light"></p>
+                    </div>
+                </div>
+            </div>
+        <br><br>
+    </div>
+
+    <footer class="page-footer btn-my">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">DEVSIGN</h5>
+                    <p class="grey-text text-lighten-4">We protect your copyright.</p>
+
+
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text"></h5>
+                    <ul>
+                    </ul>
+                </div>
+             <div class="col l3 s12">
+                    <h5 class="white-text">Connect</h5>
+                    <ul>
+                        <li><a class="white-text" href="index.html">Logout</a></li>
+                        <li><a class="white-text" href="mypage.html">My Page</a></li>
+                        <li><a class="white-text">Music</a></li>
+                        <li><a class="white-text">Photo</a></li>
+                        <li><a class="white-text">Text</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+      <script type="text/javascript">
+    $('.button-collapse').sideNav();
+    $(".dropdown-button").dropdown();
+  </script>
+
 </body>
 
 </html>

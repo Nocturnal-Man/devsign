@@ -7,13 +7,11 @@
 
 
 /*----까지 FireBase 바꿔주셈*/
-firebase = firebase.FirebaseApplication('https://devsign-a7066.firebaseio.com', None)
 
-#Firebase에서 ID와 Phone 가져오기
 ID = firebase.get('/USER', 'ID')
 Phone = firebase.get('/USER', 'PHONENUM')
 
-#ID와 Phone 번호 조합
+
 m = ID + Phone
 
 print(m);   //아마도 console.log(m); 이지 않을까 싶음.

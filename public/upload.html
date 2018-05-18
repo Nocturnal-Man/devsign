@@ -40,7 +40,6 @@
             <ul class="right hide-on-med-and-down">
                 <li><a>Music</a></li>
                 <li><a>Photo</a></li>
-                <li><a>Text</a></li>
                 <li><a>My page</a></li>
                 <li><a href="index.html">Logout</a></li>
             </ul>
@@ -48,11 +47,7 @@
             <ul id="nav-mobile" class="side-nav">
                 <li><a href="index.html" target="_blank" class="center">Menu</a></li>
                 <li class="divider"></li>
-                <li><a href="mypage.html">My Page</a></li>
-                <li><a>Music</a></li>
-                <li><a>Photo</a></li>
-                <li><a>Text</a></li>
-                <li><a href="index.html">Logout</a></li>
+                <li><a href="SignIn.html">Login</a></li>
             </ul>
            <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
@@ -60,10 +55,9 @@
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
             <br><br>
-            <h1 class="header center my-text">DEVSIGN</h1>
+            <h1 class="header center my-text">Hello!</h1>
             <div class="row center">
-                <a href="upload.html"><i class="material-icons" style="font-size: 50px; margin-right: 80px">cloud_upload</i></a>
-                <a href="upload.html"><i class="material-icons" style="font-size: 50px">cloud_download</i></a>
+                <h5 class="header col s12 light"></h5>
             </div>
             <div class="row center">
             
@@ -74,32 +68,17 @@
     </div>
 
 
-    <div class="container">
+    <div class="container aligncenter">
             <!--   Icon Section   -->
-            <div class="row mainbody">
-                <div class="col s12 m4 mbox">
+            <div class="row mainbody aligncenter">
+                <div class="col s12 m4 uploadbox">
                     <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">collections</i></h2>
+                        <h2 class="center light-blue-text"><i class="material-icons" style="font-size: 50px">cloud_upload</i></h2>
                         <h5 class="center" style="font-size: 23px"></h5>
-
-                        <p class="light"></p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4 mbox">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">border_color</i></h2>
-                        <h5 class="center"></h5>
-
-                        <p class="light"></p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4 mbox">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-                        <h5 class="center"></h5>
-
+                       <form action="">
+                           <input type="file" name="text"><br>
+                           <input type="submit">
+                       </form>
                         <p class="light"></p>
                     </div>
                 </div>
@@ -121,7 +100,7 @@
                     <ul>
                     </ul>
                 </div>
-                <div class="col l3 s12">
+             <div class="col l3 s12">
                     <h5 class="white-text">Connect</h5>
                     <ul>
                         <li><a class="white-text" href="index.html">Logout</a></li>
