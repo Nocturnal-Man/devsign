@@ -16,6 +16,7 @@
   "author": "none",
   "license": "ISC",
   "dependencies": {
+    "firebase": "^5.0.3",
     "hashlib": "^1.0.1"
   }
 }

@@ -34,7 +34,7 @@
 <body>
     <nav class="btn-my">
         <div class="nav-wrapper container">
-            <a id="logo-container" class="brand-logo"><img src="img/logo.png"></a>
+            <a id="logo-container" class="brand-logo"><img src="img/pont1.png"></a>
 
             <ul class="right hide-on-med-and-down">
                 <li><a>Music</a></li>
@@ -60,9 +60,11 @@
                         <h2 class="center light-blue-text"><i class="material-icons" style="font-size: 50px">cloud_upload</i></h2>
                         <h5 class="center" style="font-size: 23px"></h5>
                         <progress value="0" max="100" id="uploader">o%</progress>
-                        <input type="file" value="upload" id="fileButton" />
+                        <input type="file" value="upload" id="fileButton"/>
+                        <br>
+                        <a class="btn-large waves-effect waves-light btn-my"  href="MainPage.html">Upload</a>
                     </div>
-                    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+                    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase.js"></script>
                     <script>
                         // Initialize Firebase
                         var config = {
@@ -74,6 +76,7 @@
                             messagingSenderId: "1098166753532"
                         };
                         firebase.initializeApp(config);
+
                         var storage = firebase.storage();
 
 
@@ -89,7 +92,7 @@
 
                             var task = storageRef.put(file);
 
-                            task.on('state_change', function progress(snapshot) {
+                            task.on('state_changed', function progress(snapshot) {
                                     var percentage = (snapshot.byteTransferred / snapshot.totalBytes) * 100;
                                     uploader.value = percentage;
                                 },
