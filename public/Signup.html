@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SignUpPage</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <style media="screen">
+        body {
+            background: #eee;
+        }
+
+        #MY_NAME {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        #CONTENTS {
+            min-height: 700px;
+            margin-top: 20px;
+        }
+
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #3f51b5 !important;
+            box-shadow: 0 1px 0 0 #3f51b5 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="lighten-1 btn-my" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" class="brand-logo"><img src="img/pont1.png"></a>
+
+            <!-- 메인메뉴 -->
+            <ul class="right hide-on-med-and-down">
+                <li><a href="index.html" class="">HOME</a></li>
+                <li><a class="dropdown-button" data-activates="dropdown1"><i class="material-icons">more_vert</i></a></li>
+            </ul>
+
+            <!-- 드롭다운 메뉴 -->
+            <ul id="dropdown1" class="dropdown-content">
+                    <li><a href="index.html" target="_blank" class="center">Home</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#" style="color: black">Tools</a></li>
+                    <li><a href="#">Null</a></li>
+                </ul>
+
+            <!-- 모바일 메인 메뉴 -->
+           <ul id="nav-mobile" class="side-nav index_m_menu">
+                    <li><a href="index.html" target="_blank" class="center">Home</a></li>
+                    <li class="divider"></li>
+                    <li><a href="SignUpPage.html" style="color: black">SignUp</a></li>
+                </ul>
+
+           <a href="#" data-activates="nav-mobile" class="button-collapse" style="color: black"><i class="material-icons">menu</i></a>
+        </div>
+    </nav>
+    <div class="section no-pad-bot " id="index-banner">
+        <div class="container mysection">
+            <br><br>
+            <h3 class="header center my-text">Please sign in to Google.</h3>
+            <div class="row center">
+                <div class="container" id="CONTENTS">
+                    <!-- 로그인박스 -->
+                    <div class="card">
+                        <div class="card-content">
+                        <i id="AUTH_STATE_FACE" class="material-icons" style="font-size: 50px;color:coral; align-content: center; ">sentiment_very_dissatisfied</i><br>
+                            <span id="AUTH_STATE" class="blue-text material-icons">(인증되지 않은 사용자입니다.)</span>
+                        </div>
+                        <div class="card-action">
+                            <button id="BTN_GOOGLE_LOGIN" type="button" class="btn indigo">Google Login</button>
+                            <!-- TODO 로그아웃 버튼 -->
+                            
+                            <!-- TODO 유저 정보 확인용 요소 추가 -->
+                            <br><br><div class="row center">
+                                <a id="BTN_SET_EQUIP" type="button" class="btn-large waves-effect waves-light btn-my" href="Mainpage.html" style="text-decoration-color: white; display:none">View My Equipment</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br><br>
+        </div>
+    </div>
+     <footer class="page-footer btn-my">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Copy Block</h5>
+                    <p class="grey-text text-lighten-4">Your copyright is protected in a free environment.</p>
+
+
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text"></h5>
+                    <ul>
+                    </ul>
+                </div>
+                <div class="col l3 s12">
+                    <h5 class="white-text">Special Thanks</h5>
+                    <ul>
+                        <li><a class="white-text" href="http://materializecss.com">Materialize</a></li>
+                        <li><a class="white-text" href="https://firebase.google.com/">Firebase</a></li>
+                        <li><a class="white-text" href="https://www.google.com/">Google</a></li>
+                        <li><a class="white-text" href="https://www.facebook.com/groups/codingeverybody/?ref=nf_target&fref=nf">생활코딩</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/google_login.js"></script>
+    <script type="text/javascript">
+        $('.button-collapse').sideNav();
+        $(".dropdown-button").dropdown();
+    </script>
+</body>
+
+</html>
