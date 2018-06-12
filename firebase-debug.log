@@ -1,41 +1,41 @@
-[debug] [2018-06-08T11:27:28.939Z] ----------------------------------------------------------------------
-[debug] [2018-06-08T11:27:28.941Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
-[debug] [2018-06-08T11:27:28.942Z] CLI Version:   3.18.6
-[debug] [2018-06-08T11:27:28.942Z] Platform:      win32
-[debug] [2018-06-08T11:27:28.942Z] Node Version:  v9.8.0
-[debug] [2018-06-08T11:27:28.943Z] Time:          Fri Jun 08 2018 20:27:28 GMT+0900 (대한민국 표준시)
-[debug] [2018-06-08T11:27:28.943Z] ----------------------------------------------------------------------
+[debug] [2018-06-10T12:27:15.010Z] ----------------------------------------------------------------------
+[debug] [2018-06-10T12:27:15.012Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-06-10T12:27:15.013Z] CLI Version:   3.18.6
+[debug] [2018-06-10T12:27:15.013Z] Platform:      win32
+[debug] [2018-06-10T12:27:15.013Z] Node Version:  v9.8.0
+[debug] [2018-06-10T12:27:15.014Z] Time:          Sun Jun 10 2018 21:27:15 GMT+0900 (대한민국 표준시)
+[debug] [2018-06-10T12:27:15.014Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-06-08T11:27:28.953Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-06-08T11:27:28.954Z] > authorizing via signed-in user
-[debug] [2018-06-08T11:27:28.956Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/devsign-a7066  
+[debug] [2018-06-10T12:27:15.024Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-06-10T12:27:15.025Z] > authorizing via signed-in user
+[debug] [2018-06-10T12:27:15.027Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/devsign-a7066  
   
- Fri Jun 08 2018 20:27:28 GMT+0900 (대한민국 표준시)
-[debug] [2018-06-08T11:27:30.172Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-08T11:27:30.173Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/devsign-a7066/tokens  
+ Sun Jun 10 2018 21:27:15 GMT+0900 (대한민국 표준시)
+[debug] [2018-06-10T12:27:16.202Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-10T12:27:16.203Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/devsign-a7066/tokens  
   
- Fri Jun 08 2018 20:27:30 GMT+0900 (대한민국 표준시)
-[debug] [2018-06-08T11:27:30.940Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-08T11:27:30.940Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/devsign-a7066  
+ Sun Jun 10 2018 21:27:16 GMT+0900 (대한민국 표준시)
+[debug] [2018-06-10T12:27:17.017Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-10T12:27:17.017Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/devsign-a7066  
   
- Fri Jun 08 2018 20:27:30 GMT+0900 (대한민국 표준시)
-[debug] [2018-06-08T11:27:31.898Z] <<< HTTP RESPONSE 200
+ Sun Jun 10 2018 21:27:17 GMT+0900 (대한민국 표준시)
+[debug] [2018-06-10T12:27:18.143Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from 'C:\Users\user\dev\devsign'...
 [info] 
 [info] i  functions: Preparing to emulate functions.
-[debug] [2018-06-08T11:27:32.767Z] Fetching environment
-[debug] [2018-06-08T11:27:32.771Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1098166753532:getServerAppConfig  
+[debug] [2018-06-10T12:27:22.060Z] Fetching environment
+[debug] [2018-06-10T12:27:22.064Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1098166753532:getServerAppConfig  
   
- Fri Jun 08 2018 20:27:32 GMT+0900 (대한민국 표준시)
-[debug] [2018-06-08T11:27:32.771Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1098166753532/clients/_:getWebAppConfig  
+ Sun Jun 10 2018 21:27:22 GMT+0900 (대한민국 표준시)
+[debug] [2018-06-10T12:27:22.064Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/1098166753532/clients/_:getWebAppConfig  
   
- Fri Jun 08 2018 20:27:32 GMT+0900 (대한민국 표준시)
-[debug] [2018-06-08T11:27:33.626Z] <<< HTTP RESPONSE 200
+ Sun Jun 10 2018 21:27:22 GMT+0900 (대한민국 표준시)
+[debug] [2018-06-10T12:27:23.019Z] <<< HTTP RESPONSE 200
+[debug] [2018-06-10T12:27:23.019Z] Starting @google-cloud/functions-emulator
+[debug] [2018-06-10T12:27:23.332Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] +  hosting: Local server: http://localhost:5000
 
-[debug] [2018-06-08T11:27:33.649Z] <<< HTTP RESPONSE 200
-[debug] [2018-06-08T11:27:33.649Z] Starting @google-cloud/functions-emulator
-[debug] [2018-06-08T11:27:35.688Z] Parsing function triggers
+[debug] [2018-06-10T12:27:26.062Z] Parsing function triggers
 [info] i  functions: No HTTPS functions found. Use firebase functions:shell if you would like to emulate other types of functions.

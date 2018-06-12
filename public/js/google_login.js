@@ -4,14 +4,15 @@ $("#BTN_GOOGLE_LOGIN").click(function () {
 
     var provider = new firebase.auth.GoogleAuthProvider();
 
+
     firebase.auth().signInWithPopup(provider).then(function (result) {
         $('#AUTH_STATE').text(result.user.displayName + "님 로그인 하셨습니다");
         $('#AUTH_STATE_FACE').text("sentiment_very_satisfied");
         document.getElementById("AUTH_STATE_FACE").style.color = "blue";
-
-       var userId = firebase.auth().currentUser.uid;
-       var username = firebase.auth().user.displayName;
-        firebase.database().ref(username).set(userId);
+        document.getElementById("BTN_SET_EQUIP").style.display = "inline-block";
+        //var name = document.getElementById("AUTH_STATE").text(result.user.displayName);
+        var userId = firebase.auth().currentUser.uid;
+        firebase.database().ref(userId).set(userId);
     }).catch(function (error) {
         alert(error.message)
     });
