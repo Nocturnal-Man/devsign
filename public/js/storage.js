@@ -30,7 +30,6 @@
            task.on('state_change'function progress(snapshot) {
 
                    fileRef.updateMetadata(newMetadata).then(function (metadata) {
-
                    }).catch(function (error) {
 
                    });

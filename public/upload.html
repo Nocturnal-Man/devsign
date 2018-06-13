@@ -75,33 +75,40 @@
                             messagingSenderId: "1098166753532"
                         };
                         firebase.initializeApp(config);
+                        console.log("파이어베이스 연결완료");
+
+                        //console.log(ID + "입니다.");
+
+                        var id = firebase.auth().currentUser.uid;
+                        console.log(id + "입니다");
 
                         var storage = firebase.storage();
-
 
                         var uploader = document.getElementById('uploader');
                         var fileButton = document.getElementById('fileButton');
 
                         fileButton.addEventListener('change', function(e) {
+
                             //Get file
+                            console.log("파일 업로드 시작");
                             var file = e.target.files[0];
+                            var metadataa = {
+                                customMetadata: {
+                                    'uid': 'uid'
+                                }
+                            }
 
                             //Create a Stoarge
                             var storageRef = storage.ref('Folder/' + file.name);
 
-                            var task = storageRef.put(file);
+                            var task = storageRef.put(file, metadataa);
 
-                            task.on('state_changed', function progress(snapshot) {
-                                    var percentage = (snapshot.byteTransferred / snapshot.totalBytes) * 100;
-                                    uploader.value = percentage;
-                                },
-                                function error(err) {
+                            storageRef.getMetaData().then(function(metadata) {
 
-                                },
-                                function complere() {
-
-                                }
-                            );
+                            }).catch(function(error) {
+                                alert(error.message);
+                            });
+                            console.log("업로드 완료");
                         });
                     </script>
                     <p class="light"></p>
@@ -130,10 +137,6 @@
                     <h5 class="white-text">Connect</h5>
                     <ul>
                         <li><a class="white-text" href="index.html">Logout</a></li>
-                        <li><a class="white-text" href="mypage.html">My Page</a></li>
-                        <li><a class="white-text">Music</a></li>
-                        <li><a class="white-text">Photo</a></li>
-                        <li><a class="white-text">Text</a></li>
                     </ul>
                 </div>
             </div>
@@ -152,6 +155,7 @@
     <script src="js/materialize.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.0.0/firebase-auth.js"></script>
     <script type="text/javascript">
         $('.button-collapse').sideNav();
         $(".dropdown-button").dropdown();
